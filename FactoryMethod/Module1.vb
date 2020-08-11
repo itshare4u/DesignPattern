@@ -9,35 +9,34 @@ Module Module1
 
     Public Interface Bank
         Function GetBankName As String
-        Property Name() As String
     End Interface
 
     Public Class TpBank
         Implements Bank
 
         Public Sub New()
-            Bank_Name = "TPBank"
+            BankName = "TPBank"
         End Sub
 
         Public Function GetBankName() As String Implements Bank.GetBankName
-            Return Bank_Name
+            Return BankName
         End Function
 
-        Private Property Bank_Name As String Implements Bank.Name
+        Private Property BankName
     End Class
 
     Public Class VietComBank
         Implements Bank
 
         Public Sub New()
-            Bank_Name = "VietCombank"
+            BankName = "VietCombank"
         End Sub
 
         Public Function GetBankName() As String Implements Bank.GetBankName
-            Return Bank_Name
+            Return BankName
         End Function
 
-        Private Property Bank_Name As String Implements Bank.Name
+        Private Property BankName
     End Class
 
     Enum BankType
